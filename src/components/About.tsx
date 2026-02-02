@@ -38,7 +38,7 @@ export default function About() {
               alt="Dr. Maya Reynolds"
               width={500}
               height={600}
-              className="object-cover object-top w-full h-full"
+              className="object-cover object-[50%_10%] w-full h-full"
             />
           </div>
 

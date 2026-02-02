@@ -24,11 +24,11 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-inter);
+  font-family: var(--font-body);
 }
 
 h1, h2, h3 {
-  font-family: var(--font-playfair);
+  font-family: var(--font-heading);
 }
 html {
   scroll-behavior: smooth;

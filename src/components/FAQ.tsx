@@ -8,39 +8,47 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="grid md:grid-cols-2 px-12 py-28 items-center">
+    <section id="faq" className="grid md:grid-cols-2 px-12 py-28 items-center gap-16">
 
       {/* Left Image */}
-      <div className="rounded-[50%] overflow-hidden w-[420px] h-[420px] mx-auto">
-        <Image
-          src="/images/faq.jpg"
-          alt="FAQ"
-          width={420}
-          height={420}
-          className="w-full h-full object-cover"
-        />
+      <div className="flex justify-center">
+        <div className="relative">
+          <div className="rounded-[50%] overflow-hidden w-105 h-105 shadow-lg">
+            <Image
+              src="/images/faq.jpg"
+              alt="FAQ - Therapy Questions"
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Right Content */}
       <div>
         <h2 className="text-6xl mb-10">FAQs</h2>
 
-        <div className="border-t border-black">
+        <div className="space-y-6">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border-b border-black py-6 cursor-pointer"
-              onClick={() => setOpen(open === i ? null : i)}
+              className="border-b border-black pb-6"
             >
-              <div className="flex justify-between items-center">
-                <h3 className="text-2xl">{faq.question}</h3>
-                <span className="text-3xl">
+              <button
+                className="w-full flex justify-between items-center text-left"
+                onClick={() => setOpen(open === i ? null : i)}
+              >
+                <h3 className="text-2xl font-medium">{faq.question}</h3>
+                <span className="text-3xl ml-4">
                   {open === i ? "−" : "+"}
                 </span>
-              </div>
+              </button>
 
               {open === i && (
-                <p className="mt-4 text-gray-700 text-lg">{faq.answer}</p>
+                <div className="mt-4">
+                  <p className="text-gray-700 text-lg leading-relaxed">{faq.answer}</p>
+                </div>
               )}
             </div>
           ))}

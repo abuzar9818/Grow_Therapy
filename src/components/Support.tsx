@@ -5,7 +5,7 @@ export default function Support() {
     <section className="grid md:grid-cols-2">
 
       {/* Left Image */}
-      <div className="h-full">
+      <div>
         <Image
           src="/images/support.jpg"
           alt="Support therapy"
@@ -15,8 +15,8 @@ export default function Support() {
         />
       </div>
 
-      {/* Right Content */}
-      <div className="bg-[var(--bg-support)] px-14 py-20 flex flex-col justify-center">
+       {/* Right Content */}
+      <div className="bg-[#cfcbd7] px-14 py-20 flex flex-col">
         <h2 className="text-5xl font-semibold mb-6 leading-snug">
           You don’t have to do this <br /> all alone.
         </h2>
@@ -35,10 +35,11 @@ export default function Support() {
         </ul>
 
         <p className="mt-8 text-lg text-gray-700">
-          With warmth and collaboration, we’ll work together to help you feel more regulated, resilient, and connected to yourself.
+          With warmth and collaboration, we’ll work together to help you feel
+          more regulated, resilient, and connected to yourself.
         </p>
 
-        <button className="mt-10 underline uppercase tracking-wide">
+        <button className="mt-10 underline uppercase tracking-wide w-fit">
           Work With Dr. Reynolds →
         </button>
       </div>

@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <section className="bg-(--bg-cta) text-white text-center px-12 py-32">
+    <section className="bg-[var(--bg-cta)] text-white text-center px-12 py-32">
       <h2 className="text-6xl mb-6">Get started today.</h2>
 
       <p className="text-lg max-w-2xl mx-auto leading-relaxed text-white/80">

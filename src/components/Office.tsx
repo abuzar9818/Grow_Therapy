@@ -20,31 +20,31 @@ export default function Office() {
       </p>
 
       <div className="grid md:grid-cols-3 gap-6">
-        <div className="aspect-video rounded-2xl overflow-hidden">
+        <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="/images/office1.jpeg"
             alt="Office space"
-            width={400}
-            height={300}
-            className="w-full h-full object-cover"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
-        <div className="aspect-video rounded-2xl overflow-hidden">
+        <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="/images/office2.jpeg"
             alt="Therapy room"
-            width={400}
-            height={300}
-            className="w-full h-full object-cover"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
-        <div className="aspect-video rounded-2xl overflow-hidden">
+        <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="/images/office6.png"
             alt="Counseling space"
-            width={400}
-            height={300}
-            className="w-full h-full object-cover"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
       </div>
