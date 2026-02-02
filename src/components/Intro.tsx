@@ -5,7 +5,7 @@ export default function Intro() {
         <section className="grid md:grid-cols-2">
 
             {/* Left Text */}
-            <div className="bg-(--bg-intro) px-14 py-20 flex flex-col justify-center">
+            <div className="bg-[var(--bg-intro)] px-14 py-20 flex flex-col justify-center">
                 <h2 className="text-5xl font-semibold mb-6">
                     Find calm, clarity, and emotional balance again.
                 </h2>
@@ -21,7 +21,7 @@ export default function Intro() {
             </div>
 
             {/* Right Image */}
-            <div>
+            <div className="h-full">
                 <Image
           src="/images/intro.jpg"
           alt="calm lifestyle"

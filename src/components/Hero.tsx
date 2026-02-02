@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section id="home" className="px-12 py-20 bg-(--secondary)">
+        <section id="home" className="px-12 py-20 bg-[var(--secondary)]">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
                 {/* Left Image */}
                 <div className="flex justify-center">
-                    <div className=" overflow-hidden w-150 h-150">
+                    <div className=" overflow-hidden w-150 h-150 rounded-md shadow-md">
                         <Image
                             src="/images/HeroDoctor.png"
                             alt="Therapy support"
                             width={500}
                             height={500}
-                            className="object-cover w-full h-full"
+                            className="object-cover object-[50%_10%] w-full h-full"
                         />
                     </div>
                 </div>

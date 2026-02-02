@@ -5,7 +5,7 @@ export default function Support() {
     <section className="grid md:grid-cols-2">
 
       {/* Left Image */}
-      <div>
+      <div className="h-full">
         <Image
           src="/images/support.jpg"
           alt="Support therapy"
@@ -16,7 +16,7 @@ export default function Support() {
       </div>
 
       {/* Right Content */}
-      <div className="bg-(--bg-support) px-14 py-20 flex flex-col justify-center">
+      <div className="bg-[var(--bg-support)] px-14 py-20 flex flex-col justify-center">
         <h2 className="text-5xl font-semibold mb-6 leading-snug">
           You don’t have to do this <br /> all alone.
         </h2>

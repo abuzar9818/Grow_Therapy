@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { faqs } from "@/data/Faqs";
 
 export default function FAQ() {
@@ -10,10 +11,12 @@ export default function FAQ() {
     <section id="faq" className="grid md:grid-cols-2 px-12 py-28 items-center">
 
       {/* Left Image */}
-      <div className="rounded-[50%] overflow-hidden w-105 h-105 mx-auto">
-        <img
+      <div className="rounded-[50%] overflow-hidden w-[420px] h-[420px] mx-auto">
+        <Image
           src="/images/faq.jpg"
           alt="FAQ"
+          width={420}
+          height={420}
           className="w-full h-full object-cover"
         />
       </div>

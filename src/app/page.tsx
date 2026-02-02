@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+    <main className="pt-12">
       <Navbar />
       <Hero />
       <Intro />
@@ -24,6 +25,7 @@ export default function Home() {
       <Background />
       <CTA />
       <Footer />
+      </main>
     </>
   );
 }
