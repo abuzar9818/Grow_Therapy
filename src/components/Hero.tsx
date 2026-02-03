@@ -7,13 +7,13 @@ export default function Hero() {
 
                 {/* Left Image */}
                 <div className="flex justify-center">
-                    <div className=" overflow-hidden w-150 h-150 rounded-md shadow-md">
+                    <div className="overflow-hidden w-150 h-150 rounded-md shadow-md">
                         <Image
                             src="/images/HeroDoctor.png"
                             alt="Therapy support"
                             width={500}
                             height={500}
-                            className="object-cover object-[50%_10%] w-full h-full"
+                            className="object-cover object-[50%_10%] w-full h-full transition-transform duration-500 hover:scale-105"
                         />
                     </div>
                 </div>

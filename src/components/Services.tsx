@@ -23,7 +23,7 @@ export default function Services() {
                 alt={s.title}
                 width={300}
                 height={300}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
               />
             </div>
           </div>

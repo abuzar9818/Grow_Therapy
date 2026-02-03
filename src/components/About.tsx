@@ -32,26 +32,26 @@ export default function About() {
         <div className="relative flex justify-center">
 
           {/* Main Circle */}
-          <div className="rounded-[50%] overflow-hidden w-105 h-105 ">
+          <div className="rounded-[50%] overflow-hidden w-105 h-105">
             <Image
               src="/images/HeroDoctor.png"
               alt="Dr. Maya Reynolds"
               width={500}
               height={600}
-              className="object-cover object-[50%_10%] w-full h-full"
+              className="object-cover object-[50%_10%] w-full h-full transition-transform duration-500 hover:scale-105"
             />
           </div>
 
           {/* Small Overlapping Circle */}
-          <div className="absolute -bottom-14 -right-10 w-55 h-55 rounded-full overflow-hidden border-4 border-white">
+          {/* <div className="absolute -bottom-14 -right-10 w-55 h-55 rounded-full overflow-hidden border-4 border-white">
             <Image
               src="/images/about_extra.jpg"
               alt="Therapy office"
               width={250}
               height={250}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
             />
-          </div>
+          </div> */}
         </div>
 
       </div>

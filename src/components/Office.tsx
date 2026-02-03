@@ -26,7 +26,7 @@ export default function Office() {
             alt="Office space"
             width={600}
             height={400}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
         <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
@@ -35,7 +35,7 @@ export default function Office() {
             alt="Therapy room"
             width={600}
             height={400}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
         <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
@@ -44,7 +44,7 @@ export default function Office() {
             alt="Counseling space"
             width={600}
             height={400}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
       </div>

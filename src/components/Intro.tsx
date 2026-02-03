@@ -9,11 +9,24 @@ export default function Intro() {
                 <h2 className="text-5xl font-semibold mb-6">
                     Find calm, clarity, and emotional balance again.
                 </h2>
-
-                <p className="text-lg leading-relaxed text-gray-700">
-                    Life can look “fine” on the outside while internally you feel anxious, stuck in overthinking, or constantly on edge.
-                    Therapy can be a space to slow down, feel supported, and begin healing—both emotionally and physically—so you can move through life with more ease and steadiness.
-                </p>
+                
+                <div className="space-y-6">
+                    <p className="text-lg leading-relaxed text-gray-700">
+                        Life can appear completely “fine” on the outside—you may be keeping up with responsibilities, showing up for work, caring for others, and doing what’s expected—yet internally feel overwhelmed by constant anxiety, racing thoughts, or an emotional heaviness you can’t quite explain.
+                    </p>
+                    
+                    <p className="text-lg leading-relaxed text-gray-700">
+                        Overthinking can become exhausting, leaving you stuck in cycles of worry, self-doubt, or feeling like you’re never truly able to relax. Even in moments of quiet, your mind may stay on high alert, and your body may carry tension, stress, or fatigue without relief.
+                    </p>
+                    
+                    <p className="text-lg leading-relaxed text-gray-700">
+                        Therapy offers a space where you don’t have to hold it all together or push through alone. It can be a place to slow down, feel deeply supported, and begin understanding what’s happening beneath the surface.
+                    </p>
+                    
+                    <p className="text-lg leading-relaxed text-gray-700">
+                        Together, we can gently explore the patterns, experiences, and emotions that may be keeping you feeling on edge, while building tools that help you feel more grounded, connected, and steady.
+                    </p>
+                </div>
 
                 <button className="mt-10 underline uppercase tracking-wide">
                     Get in Touch →
@@ -21,14 +34,14 @@ export default function Intro() {
             </div>
 
             {/* Right Image */}
-            <div>
+            <div className="overflow-hidden">
                 <Image
-          src="/images/intro.jpg"
-          alt="calm lifestyle"
-          width={900}
-          height={7000}
-          className="w-full h-full object-cover"
-        />
+                    src="/images/intro.jpg"
+                    alt="calm lifestyle"
+                    width={900}
+                    height={700}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
             </div>
         </section>
     );

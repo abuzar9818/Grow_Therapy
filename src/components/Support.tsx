@@ -2,22 +2,22 @@ import Image from "next/image";
 
 export default function Support() {
   return (
-    <section className="grid md:grid-cols-2">
+    <section className="flex flex-col md:grid md:grid-cols-2 w-full">
 
       {/* Left Image */}
-      <div>
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-full md:min-h-[700px] overflow-hidden">
         <Image
           src="/images/support.jpg"
           alt="Support therapy"
-          width={900}
-          height={700}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover object-[center_20%] transition-transform duration-500 hover:scale-110"
         />
       </div>
 
-       {/* Right Content */}
-      <div className="bg-[#cfcbd7] px-14 py-20 flex flex-col">
-        <h2 className="text-5xl font-semibold mb-6 leading-snug">
+      {/* Right Content */}
+      <div className="bg-[#cfcbd7] px-10 md:px-14 py-16 md:py-20 flex flex-col justify-center md:min-h-[700px]">
+
+        <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-snug">
           You don’t have to do this <br /> all alone.
         </h2>
 

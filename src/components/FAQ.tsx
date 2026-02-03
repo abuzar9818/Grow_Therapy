@@ -19,7 +19,7 @@ export default function FAQ() {
               alt="FAQ - Therapy Questions"
               width={400}
               height={400}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>
