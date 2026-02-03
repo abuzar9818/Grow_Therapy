@@ -1,11 +1,24 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 export default function About() {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleLetsChat = () => {
+    setIsClicked(true);
+
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+    
+    setTimeout(() => setIsClicked(false), 300);
+  };
+
   return (
     <section id="about" className="px-12 py-28">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
-        {/* Left Content */}
         <div>
           <h2 className="text-6xl font-semibold mb-8">
             Hi, I’m Dr. Maya Reynolds, PsyD.
@@ -23,15 +36,16 @@ export default function About() {
           My approach is warm, structured, and grounded, integrating CBT, EMDR, mindfulness, and body-based techniques to support both emotional and nervous system healing.
           </p>
 
-          <button className="mt-10 border border-black px-8 py-3 uppercase tracking-wide hover:bg-black hover:text-white transition">
+          <button 
+            onClick={handleLetsChat}
+            className={`mt-10 border border-black px-8 py-3 uppercase tracking-wide transition-all duration-300 transform ${isClicked ? 'scale-95 bg-black text-white' : 'hover:bg-black hover:text-white hover:scale-105 hover:shadow-lg'}`}
+          >
             Let’s Chat →
           </button>
         </div>
 
-        {/* Right Images */}
         <div className="relative flex justify-center">
 
-          {/* Main Circle */}
           <div className="rounded-[50%] overflow-hidden w-105 h-105">
             <Image
               src="/images/HeroDoctor.png"
@@ -42,16 +56,6 @@ export default function About() {
             />
           </div>
 
-          {/* Small Overlapping Circle */}
-          {/* <div className="absolute -bottom-14 -right-10 w-55 h-55 rounded-full overflow-hidden border-4 border-white">
-            <Image
-              src="/images/about_extra.jpg"
-              alt="Therapy office"
-              width={250}
-              height={250}
-              className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-            />
-          </div> */}
         </div>
 
       </div>

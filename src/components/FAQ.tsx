@@ -10,7 +10,6 @@ export default function FAQ() {
   return (
     <section id="faq" className="grid md:grid-cols-2 px-12 py-28 items-center gap-16">
 
-      {/* Left Image */}
       <div className="flex justify-center">
         <div className="relative">
           <div className="rounded-[50%] overflow-hidden w-105 h-105 shadow-lg">
@@ -25,7 +24,6 @@ export default function FAQ() {
         </div>
       </div>
 
-      {/* Right Content */}
       <div>
         <h2 className="text-6xl mb-10">FAQs</h2>
 
@@ -36,11 +34,11 @@ export default function FAQ() {
               className="border-b border-black pb-6"
             >
               <button
-                className="w-full flex justify-between items-center text-left"
+                className="w-full flex justify-between items-center text-left hover:text-(--primary) transition-colors duration-200"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <h3 className="text-2xl font-medium">{faq.question}</h3>
-                <span className="text-3xl ml-4">
+                <span className="text-3xl ml-4 transition-transform duration-200">
                   {open === i ? "−" : "+"}
                 </span>
               </button>

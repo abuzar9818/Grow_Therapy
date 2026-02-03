@@ -1,6 +1,21 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Intro() {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleGetInTouch = () => {
+        setIsClicked(true);
+ 
+        const contactSection = document.getElementById("contact");
+        contactSection?.scrollIntoView({ behavior: "smooth" });
+        
+
+        setTimeout(() => setIsClicked(false), 300);
+    };
+
     return (
         <section className="grid md:grid-cols-2">
 
@@ -28,7 +43,10 @@ export default function Intro() {
                     </p>
                 </div>
 
-                <button className="mt-10 underline uppercase tracking-wide">
+                <button 
+                    onClick={handleGetInTouch}
+                    className={`mt-10 underline uppercase tracking-wide transition-all duration-300 transform ${isClicked ? 'scale-95 opacity-70' : 'hover:scale-105 hover:opacity-100 hover:decoration-2'}`}
+                >
                     Get in Touch →
                 </button>
             </div>

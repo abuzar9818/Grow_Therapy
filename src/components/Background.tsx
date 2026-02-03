@@ -30,11 +30,11 @@ export default function Background() {
           {items.map((item, i) => (
             <div key={i} className="border-b border-black py-6 text-left">
               <button
-                className="w-full flex justify-between items-center text-2xl"
+                className="w-full flex justify-between items-center text-2xl hover:text-(--primary) transition-colors duration-200"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 {item.title}
-                <span className="text-3xl">{open === i ? "−" : "+"}</span>
+                <span className="text-3xl transition-transform duration-200">{open === i ? "−" : "+"}</span>
               </button>
 
               {open === i && (

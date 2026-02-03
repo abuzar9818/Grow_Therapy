@@ -20,7 +20,7 @@ export default function Home() {
       <Services />
       <Support />
       <About />
-      <Office /> {/* ✅ Custom Required Section */}
+      <Office />
       <FAQ />
       <Background />
       <CTA />

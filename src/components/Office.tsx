@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Office() {
   return (
-    <section id="office" className="px-12 py-24 bg-[var(--bg-office)]">
+    <section id="office" className="px-12 py-24 bg-(--bg-office)">
       <h2 className="text-5xl text-center mb-6">
        A Calm Space for Healing in Santa Monica
       </h2>

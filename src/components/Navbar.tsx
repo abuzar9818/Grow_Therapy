@@ -16,7 +16,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // ✅ Active section highlight on scroll
   useEffect(() => {
     const sections = navLinks.map((link) =>
       document.getElementById(link.id)
@@ -44,7 +43,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // ✅ Shadow appears after scrolling
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -54,7 +52,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Smooth scroll
+
   const handleScrollTo = (id: string) => {
     setMobileOpen(false);
 
@@ -75,7 +73,7 @@ export default function Navbar() {
       {/* Logo */}
       <button
         onClick={() => handleScrollTo("home")}
-        className="text-2xl font-semibold tracking-wide"
+        className="text-2xl font-semibold tracking-wide hover:text-(--primary) transition-colors duration-200"
       >
         Dr. Maya Reynolds
       </button>
@@ -86,9 +84,9 @@ export default function Navbar() {
           <button
             key={link.id}
             onClick={() => handleScrollTo(link.id)}
-            className={`transition hover:underline ${
+            className={`transition-colors duration-200 hover:text-(--primary) ${
               activeSection === link.id
-                ? "font-semibold underline"
+                ? "font-semibold text-(--primary)"
                 : "text-gray-700"
             }`}
           >
@@ -97,9 +95,8 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* Mobile Hamburger */}
       <button
-        className="md:hidden text-3xl"
+        className="md:hidden text-3xl hover:text-(--primary) transition-colors duration-200"
         onClick={() => setMobileOpen(!mobileOpen)}
       >
         ☰
@@ -120,9 +117,9 @@ export default function Navbar() {
             <button
               key={link.id}
               onClick={() => handleScrollTo(link.id)}
-              className={`text-left text-lg ${
+              className={`text-left text-lg hover:text-(--primary) transition-colors duration-200 ${
                 activeSection === link.id
-                  ? "font-semibold underline"
+                  ? "font-semibold text-(--primary)"
                   : ""
               }`}
             >

@@ -1,12 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="bg-[var(--bg-footer)] px-6 sm:px-8 md:px-12 py-12 md:py-16 border-t border-gray-200 mt-0">
+    <footer className="bg-(--bg-footer) px-6 sm:px-8 md:px-12 py-12 md:py-16 border-t border-gray-200 mt-0">
       <div className="max-w-7xl mx-auto">
         
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
           
-          {/* Professional Info */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
               Dr. Maya Reynolds, PsyD
@@ -24,19 +22,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact Information */}
           <div>
             <h4 className="text-xl font-semibold mb-4 text-gray-900">Contact</h4>
             <div className="space-y-3">
               <a 
                 href="mailto:dr.maya@therapypractice.com" 
-                className="block text-gray-700 hover:text-[var(--primary)] transition-colors duration-200 underline decoration-gray-300 hover:decoration-[var(--primary)]"
+                className="block text-gray-700 hover:text-(--primary) transition-colors duration-200 underline decoration-gray-300 hover:decoration-(--primary)"
               >
                 dr.maya@therapypractice.com
               </a>
               <a 
                 href="tel:+13105550123" 
-                className="block text-gray-700 hover:text-[var(--primary)] transition-colors duration-200 underline decoration-gray-300 hover:decoration-[var(--primary)]"
+                className="block text-gray-700 hover:text-(--primary) transition-colors duration-200 underline decoration-gray-300 hover:decoration-(--primary)"
               >
                 (310) 555-0123
               </a>
@@ -73,24 +70,24 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-3 text-gray-900">Quick Links</h4>
               <div className="flex flex-wrap gap-4">
-                <a href="#home" className="text-gray-700 hover:text-[var(--primary)] transition-colors duration-200">Home</a>
-                <a href="#about" className="text-gray-700 hover:text-[var(--primary)] transition-colors duration-200">About</a>
-                <a href="#services" className="text-gray-700 hover:text-[var(--primary)] transition-colors duration-200">Services</a>
-                <a href="#faq" className="text-gray-700 hover:text-[var(--primary)] transition-colors duration-200">FAQ</a>
-                <a href="#contact" className="text-gray-700 hover:text-[var(--primary)] transition-colors duration-200">Contact</a>
+                <a href="#home" className="text-gray-700 hover:text-(--primary) transition-colors duration-200">Home</a>
+                <a href="#about" className="text-gray-700 hover:text-(--primary) transition-colors duration-200">About</a>
+                <a href="#services" className="text-gray-700 hover:text-(--primary) transition-colors duration-200">Services</a>
+                <a href="#faq" className="text-gray-700 hover:text-(--primary) transition-colors duration-200">FAQ</a>
+                <a href="#contact" className="text-gray-700 hover:text-(--primary) transition-colors duration-200">Contact</a>
               </div>
             </div>
             
             <div className="flex gap-3">
               <div className="text-center">
-                <p className="text-2xl font-bold text-[var(--primary)]">🌿</p>
+                <p className="text-2xl font-bold text-(--primary)">🌿</p>
                 <p className="text-xs text-gray-600">Mindful Therapy</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Copyright & Legal */}
+
         <div className="border-t border-gray-200 pt-6 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-600 text-center md:text-left">

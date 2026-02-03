@@ -1,21 +1,36 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Support() {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleWorkWithDrReynolds = () => {
+    setIsClicked(true);
+    // Scroll to contact section
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+    
+    // Reset animation after 300ms
+    setTimeout(() => setIsClicked(false), 300);
+  };
+
   return (
     <section className="flex flex-col md:grid md:grid-cols-2 w-full">
 
       {/* Left Image */}
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-full md:min-h-[700px] overflow-hidden">
+      <div className="relative w-full h-100 sm:h-125 md:h-full md:min-h-175 overflow-hidden">
         <Image
           src="/images/support.jpg"
           alt="Support therapy"
           fill
-          className="object-cover object-[center_20%] transition-transform duration-500 hover:scale-110"
+          className="object-cover object-[center_20%] transition-transform duration-500 hover:scale-105"
         />
       </div>
 
       {/* Right Content */}
-      <div className="bg-[#cfcbd7] px-10 md:px-14 py-16 md:py-20 flex flex-col justify-center md:min-h-[700px]">
+      <div className="bg-[#cfcbd7] px-10 md:px-14 py-16 md:py-20 flex flex-col justify-center md:min-h-175">
 
         <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-snug">
           You don’t have to do this <br /> all alone.
@@ -39,7 +54,10 @@ export default function Support() {
           more regulated, resilient, and connected to yourself.
         </p>
 
-        <button className="mt-10 underline uppercase tracking-wide w-fit">
+        <button 
+          onClick={handleWorkWithDrReynolds}
+          className={`mt-10 underline uppercase tracking-wide w-fit transition-all duration-300 transform ${isClicked ? 'scale-95 opacity-70' : 'hover:scale-105 hover:opacity-100 hover:decoration-2'}`}
+        >
           Work With Dr. Reynolds →
         </button>
       </div>

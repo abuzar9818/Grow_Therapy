@@ -1,8 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleScheduleConsultation = () => {
+        setIsClicked(true);
+
+        const contactSection = document.getElementById("contact");
+        contactSection?.scrollIntoView({ behavior: "smooth" });
+
+
+        setTimeout(() => setIsClicked(false), 300);
+    };
+
     return (
-        <section id="home" className="px-12 py-20 bg-[var(--secondary)]">
+        <section id="home" className="px-12 py-20 bg-(--secondary)">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
                 {/* Left Image */}
@@ -18,7 +33,6 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* Right Content */}
                 <div>
                     <h1 className="text-6xl font-bold leading-tight">
                         Therapy for Anxiety, Trauma & Burnout in Santa Monica, CA
@@ -29,12 +43,14 @@ export default function Hero() {
                     </p>
 
                     <button
-                        className="
+                        onClick={handleScheduleConsultation}
+                        className={`
     mt-8 px-10 py-3 rounded-full 
     bg-(--primary) text-white 
     uppercase tracking-wide text-sm
-    hover:bg-black transition
-  "
+    transition-all duration-300 transform
+    ${isClicked ? 'scale-95' : 'hover:scale-105 hover:bg-(--button-hover) hover:shadow-lg'}
+  `}
                     >
                         Schedule a Consultation →
                     </button>
