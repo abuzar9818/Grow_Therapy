@@ -22,23 +22,23 @@ export default function Background() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-(--bg-background) px-12 py-32">
+    <section className="bg-(--bg-background) px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-32">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-6xl mb-12">My Professional Background</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12">My Professional Background</h2>
 
         <div className="border-t border-black">
           {items.map((item, i) => (
-            <div key={i} className="border-b border-black py-6 text-left">
+            <div key={i} className="border-b border-black py-4 sm:py-6 text-left">
               <button
-                className="w-full flex justify-between items-center text-2xl hover:text-(--primary) transition-colors duration-200"
+                className="w-full flex justify-between items-center text-xl sm:text-2xl hover:text-(--primary) transition-colors duration-200"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 {item.title}
-                <span className="text-3xl transition-transform duration-200">{open === i ? "−" : "+"}</span>
+                <span className="text-2xl sm:text-3xl transition-transform duration-200">{open === i ? "−" : "+"}</span>
               </button>
 
               {open === i && (
-                <p className="mt-4 text-gray-700 text-lg">{item.content}</p>
+                <p className="mt-3 sm:mt-4 text-gray-700 text-base sm:text-lg">{item.content}</p>
               )}
             </div>
           ))}

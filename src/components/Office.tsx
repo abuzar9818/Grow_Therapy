@@ -2,24 +2,24 @@ import Image from "next/image";
 
 export default function Office() {
   return (
-    <section id="office" className="px-12 py-24 bg-(--bg-office)">
-      <h2 className="text-5xl text-center mb-6">
+    <section id="office" className="px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-24 bg-(--bg-office)">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-4 sm:mb-6">
        A Calm Space for Healing in Santa Monica
       </h2>
 
-      <p className="text-center max-w-2xl mx-auto text-lg text-gray-700 mb-12">
+      <p className="text-center max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-gray-700 mb-6 sm:mb-8 lg:mb-12">
         Dr. Reynolds offers in-person therapy from a quiet, private office in Santa Monica designed to feel grounding, safe, and welcoming.
       </p>
 
-      <p className="text-center max-w-2xl mx-auto text-lg text-gray-700 mb-12">
+      <p className="text-center max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-gray-700 mb-6 sm:mb-8 lg:mb-12">
         With natural light, a comfortable uncluttered environment, and a sense of calm from the moment you arrive, the space supports deep reflection and meaningful healing.
       </p>
 
-      <p className="text-center max-w-2xl mx-auto text-lg text-gray-700 mb-12">
+      <p className="text-center max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-gray-700 mb-6 sm:mb-8 lg:mb-12">
         In-person and telehealth sessions are available for adults across California.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="/images/office1.jpeg"

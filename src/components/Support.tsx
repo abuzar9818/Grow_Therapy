@@ -20,7 +20,7 @@ export default function Support() {
     <section className="flex flex-col md:grid md:grid-cols-2 w-full">
 
       {/* Left Image */}
-      <div className="relative w-full h-100 sm:h-125 md:h-full md:min-h-175 overflow-hidden">
+      <div className="relative w-full h-64 sm:h-80 md:h-full md:min-h-175 overflow-hidden">
         <Image
           src="/images/support.jpg"
           alt="Support therapy"
